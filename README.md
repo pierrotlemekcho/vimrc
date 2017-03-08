@@ -9,9 +9,9 @@ http://qanuq.com/configuration-vim-avec-vundle-et-github/
 
 #### initialiser avec GITHUB
 ```
-mkdir $HOME/.vim
+pierre@IDEFIX:~$mkdir $HOME/.vim
 
-cd $HOME/.vim
+pierre@IDEFIX:~$cd $HOME/.vim
 
 git init
 
