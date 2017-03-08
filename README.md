@@ -10,14 +10,23 @@ http://qanuq.com/configuration-vim-avec-vundle-et-github/
 #### initialiser avec GITHUB
 '''
 mkdir $HOME/.vim
+
 cd $HOME/.vim
+
 git init
+
 touch vimrc
+
 git add vimrc
+
 git commit -m "First commit"
+
 git remote add origin https://github.com/ardeidae/myvimrc.git
+
 git push -u origin master
+
 ln -s $HOME/.vim/vimrc $HOME/.vimrc
+
 '''
 
 #### cloner Vundle
