@@ -8,8 +8,7 @@ http://qanuq.com/configuration-vim-avec-vundle-et-github/
 ### usage
 
 #### initialiser avec GITHUB
-
-""""
+'''
 mkdir $HOME/.vim
 cd $HOME/.vim
 git init
@@ -19,8 +18,8 @@ git commit -m "First commit"
 git remote add origin https://github.com/ardeidae/myvimrc.git
 git push -u origin master
 ln -s $HOME/.vim/vimrc $HOME/.vimrc
-"""
+'''
 
 #### cloner Vundle
 
-'git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+''' git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim '''
