@@ -9,25 +9,17 @@ http://qanuq.com/configuration-vim-avec-vundle-et-github/
 
 #### initialiser avec GITHUB
 ```
-pierre@IDEFIX:~$mkdir $HOME/.vim
+pierre@IDEFIX:~$ mkdir $HOME/.vim
 
-pierre@IDEFIX:~$cd $HOME/.vim
+pierre@IDEFIX:~$ cd $HOME/.vim
 
-git init
+pierre@IDEFIX:~/.vim$ git init
 
-touch vimrc
+pierre@IDEFIX:~/.vim$ git clone https://github.com/pierrotlemekcho/vimrc.git
 
-git add vimrc
-
-git commit -m "First commit"
-
-git remote add origin https://github.com/pierrotlemekcho/vimrc
-
-git push -u origin master
-
-ln -s $HOME/.vim/vimrc $HOME/.vimrc
+pierre@IDEFIX:~/.vim$ ln -s $HOME/.vim/vimrc $HOME/.vimrc
 ```
 
 #### cloner Vundle
 
-``` git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim ```
+```pierre@IDEFIX:~/.vim$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim ```
