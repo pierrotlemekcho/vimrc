@@ -21,9 +21,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'klen/python-mode'
-Plugin 'rope-vim'
-
-
+"Plugin 'rope-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 
 call vundle#end()
