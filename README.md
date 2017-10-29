@@ -8,8 +8,8 @@ http://qanuq.com/configuration-vim-avec-vundle-et-github/
 
 #### initialiser avec GITHUB
 ```
-pierre@IDEFIX:~$ mkdir $HOME/.vim
-pierre@IDEFIX:~$ cd $HOME/.vim
+pierre@IDEFIX:~$ mkdir .vim
+pierre@IDEFIX:~$ cd .vim
 pierre@IDEFIX:~/.vim$ git init
 pierre@IDEFIX:~/.vim$ git clone https://github.com/pierrotlemekcho/vimrc.git
 pierre@IDEFIX:~/.vim$ ln -s $HOME/.vim/vimrc $HOME/.vimrc
