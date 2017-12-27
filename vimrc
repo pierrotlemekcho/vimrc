@@ -98,7 +98,7 @@ let g:ycm_server_python_interpreter='python3'
 "	
 "EOF
 
-
+" il faudra reprendre
 " autre type de fichier
 
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -108,7 +108,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
 
 " suprimer les espaces inutileau BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 
 
 " colorisation
