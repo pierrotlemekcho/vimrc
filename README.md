@@ -2,6 +2,7 @@
 ### suivre les deux tutos
 
 https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
 http://qanuq.com/configuration-vim-avec-vundle-et-github/
 
 ### usage
