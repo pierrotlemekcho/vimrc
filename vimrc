@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
@@ -20,7 +20,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 "Plugin 'rope-vim'
 Plugin 'Valloric/YouCompleteMe'
 
@@ -39,13 +39,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap <space> za 
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 
 " Enable folding with the spacebar
-nnoremap <space> za
 
 let g:SimpylFold_docstring_preview=1
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -65,24 +65,10 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 "===============================https://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
-augroup vimrc_autocmds
-    autocmd!
-    " highlight characters past column 120
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%120v.*/
-    autocmd FileType python set nowrap
-    augroup END
-
-
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-set laststatus=2
-map <F2> :NERDTreeToggle<CR>
-set encoding=utf-8
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-autocmd FileType python set foldmethod=indent
 let python_highlight_all=1
 syntax on
 let g:ycm_server_python_interpreter='python3'
@@ -119,5 +105,6 @@ else
 endif
 
 
+set clipboard=unnamed  "OK
 
 call togglebg#map("<F5>")
