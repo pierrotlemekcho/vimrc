@@ -72,6 +72,8 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let python_highlight_all=1
 syntax on
 let g:ycm_server_python_interpreter='python3'
+let g:ycm_log_level = 'debug'
+let g:ycm_keep_logfiles = 1
 
 " python  virtualenv 
 ":python3 << EOF 
