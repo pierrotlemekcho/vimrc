@@ -3,8 +3,7 @@ vimrc
 
 https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 
-
-a verifier --> ttp://qanuq.com/configuration-vim-avec-vundle-et-github/
+https://blog.pabuisson.com/2014/07/vim-vundle-gestion-plugins/
 ### usage
 
 #### initialiser avec GITHUB 
