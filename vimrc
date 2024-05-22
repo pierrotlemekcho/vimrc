@@ -28,6 +28,7 @@ call vundle#end()
 filetype plugin indent on
 
 set nu " numerotation ligne 
+set undofile
 set undodir=~/.vim/undodir "undo persistant
 set splitbelow
 set splitright
