@@ -13,7 +13,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'preservim/nerdtree'
 "Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
@@ -104,6 +104,14 @@ call togglebg#map("<F5>")
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 set clipboard=unnamed  "OK
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+
+
 
 
 
