@@ -74,19 +74,42 @@ set encoding=utf-8
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-python3 << EOF
-import os
-import subprocess
+" === Gestion automatique des environnements virtuels Python ===
+" Active automatiquement le bon venv (.venv local ou ~/.vim/ycm_venv)
+" et synchronise YouCompleteMe + ALE
 
-if "VIRTUAL_ENV" in os.environ:
-    project_base_dir = os.environ["VIRTUAL_ENV"]
-    script = os.path.join(project_base_dir, "bin/activate")
-    pipe = subprocess.Popen(". %s; env" % script, stdout=subprocess.PIPE, shell=True)
-    output = pipe.communicate()[0].decode('utf8').splitlines()
-    env = dict((line.split("=", 1) for line in output))
-    os.environ.update(env)
+" --- Détection automatique du venv et mise à jour des variables d'environnement ---
+function! AutoDetectAndActivateVenv()
+    let l:cwd = getcwd()
+    let l:local_venv = l:cwd . '/.venv'
+    let l:global_venv = expand('~/.vim/ycm_venv')
 
-EOF
+    if isdirectory(l:local_venv)
+        let $VIRTUAL_ENV = l:local_venv
+        let $PATH = l:local_venv . '/bin:' . substitute($PATH, l:global_venv . '/bin:', '', '')
+        let g:ycm_python_interpreter_path = l:local_venv . '/bin/python3'
+    else
+        let $VIRTUAL_ENV = l:global_venv
+        let $PATH = l:global_venv . '/bin:' . substitute($PATH, l:local_venv . '/bin:', '', '')
+        let g:ycm_python_interpreter_path = l:global_venv . '/bin/python3'
+    endif
+
+    " --- Configuration ALE (si installé) ---
+    " Utiliser le même interpréteur Python que YCM
+    if exists('g:ale_python_executable')
+        let g:ale_python_executable = g:ycm_python_interpreter_path
+    else
+        let g:ale_python_executable = g:ycm_python_interpreter_path
+    endif
+
+    " Forcer ALE à se rafraîchir quand le venv change
+    if exists(':ALELint')
+        ALELint
+    endif
+endfunction
+
+" --- Lancer la détection automatique ---
+autocmd BufEnter *.py call AutoDetectAndActivateVenv()
 
 
 
